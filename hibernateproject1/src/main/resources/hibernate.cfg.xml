@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Database Connection -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/customerdb</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">Maha29</property>
+
+        <!-- Hibernate Settings -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Mapped Entities -->
+        <mapping class="com.customerfeedbackentity.Customer"/>
+        <mapping class="com.customerfeedbackentity.Feedback"/>
+
+    </session-factory>
+</hibernate-configuration>
